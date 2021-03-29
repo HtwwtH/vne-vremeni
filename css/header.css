@@ -1,0 +1,33 @@
+header {
+  font-family: Montserrat;
+  font-style: normal;
+  color: #05342F;
+  background: #F2F1EB;
+}
+
+.header__container {
+  width: 1198px;
+  margin: 0 auto;
+  background: blue;
+}
+
+@media screen and (max-width: 1205px) {
+  .header__container {
+    width: 1001px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .header__container {
+    width: 760px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__container {
+    width: 276px;
+    margin: 0 auto;
+  }
+}  
