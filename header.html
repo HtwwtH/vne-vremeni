@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="./css/header.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
-<body> 
+
+<body>
 
   <header>
     <div class="header__container">
-      <div class="header__row header__top-row"></div>
-      <div class="header__row header__bot-row"></div>
+      <div class="header__row header__top-row">
+        <div class="header__burger">
+          <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0.999981H30M0 13H30M0 25H30" stroke="#05342F"/>
+          </svg>
+        </div>
+        <div class="header__logo">
+          <img src="./images/logo/logo.svg" alt="">
+        </div>
+        <div class="header__phone">
+          <a href="tel:+79037980012" class="link-classic">+7 (903) 798 00-12</a>
+        </div>
+        <div class="header__search">
+          <input type="text" placeholder="Введите запрос" name="q" id="title-search-input" autocomplete="off">
+          <button type="submit" class="btn-beige">Поиск</button>
+        </div>
+        <div class="top-row__navigation">
+          <a href="" class="link-classic">Вход</a>
+          <a href="" class="link-classic">Избранное</a>
+          <a href="" class="link-classic">
+            <div class="cart__block">
+              <span class="header-block-info-link">Корзина</span>
+              <span class="header-block-info-desc price-block" title="(0)">1 товар на 78 000,00 Р</span>
+            </div>
+          </a>
+        </div>
+        <div class="icon-heart">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.21152 14.5788C8.12609 14.6321 8.05525 14.6754 8.00091 14.7083C7.94649 14.6749 7.87544 14.6309 7.78973 14.5768C7.57332 14.4401 7.26353 14.2395 6.8915 13.9841C6.14697 13.473 5.15545 12.7446 4.16509 11.8738C3.17365 11.002 2.19014 9.99356 1.45616 8.92354C0.720637 7.85127 0.25 6.73805 0.25 5.65157C0.25 3.20482 2.10192 1.25014 4.35201 1.25015L4.3541 1.25013C5.7322 1.23865 7.02815 1.97938 7.78635 3.22761L7.99878 3.57733L8.21301 3.22872C8.9767 1.98606 10.2699 1.2467 11.647 1.25014C13.893 1.26201 15.7386 3.21017 15.75 5.65209C15.7499 6.75618 15.2787 7.87799 14.5437 8.95268C13.8099 10.0256 12.8266 11.0317 11.8354 11.899C10.8452 12.7654 9.85392 13.4874 9.10954 13.993C8.73759 14.2457 8.42786 14.4439 8.21152 14.5788Z" stroke="" stroke-width="0.5"/>
+          </svg>
+        </div>
+        <div class="icon-basket">
+          <svg width="17" height="16" viewBox="0 0 17 16" fill="" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 2H1.921C3.17153 2 4.29089 2.77572 4.72999 3.94663L7 10M15.5 12H9.06155C8.14382 12 7.34385 11.3754 7.12127 10.4851L7 10M7 4.79167H15.6592C16.3281 4.79167 16.8084 5.4357 16.6176 6.07683L15.9167 8.4327C15.6685 9.26697 14.9092 9.84492 14.039 9.86198L7 10" stroke="" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="13" r="0.75" stroke="" stroke-width="0.5"/>
+            <circle cx="14" cy="13" r="0.75" stroke="" stroke-width="0.5"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="header__row header__bot-row">
+        <nav class="bot-row__navigation">
+          <ul>
+
+          </ul>
+        </nav>
+        <button class="online-evaluating btn-green">Онлайн-оценка</button>
+      </div>
     </div>
   </header>
 
 </body>
+
 </html>
