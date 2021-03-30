@@ -158,7 +158,7 @@ button {
     text-decoration-line: underline;
   }
   .link-classic:active {
-    color: #05342F;
+    color: inherit;
   }
   .link-gold {
     font-family: Montserrat;
@@ -207,7 +207,7 @@ a {
   text-decoration-line: none;
 }
 
-.header__container {
+.container {
   width: 100%;
   max-width: 1198px;
   margin: 0 auto;
@@ -525,7 +525,7 @@ a {
 
 .mobile-container {
   position: relative;
-  height: 100%;
+  min-height: 100%;
   width: calc(100% - 32px);
 }
 
@@ -594,8 +594,107 @@ a {
   display: none;
 }
 
+/* Footer */
+
+footer {
+  padding-bottom: 60px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  color: #F2F1EB;
+  background: #F2F1EB;
+}
+
+.footer__main {
+  background: #05342F;
+  padding: 72px 103px 112px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__icons {
+  margin-right: 236px;
+}
+
+.footer__icons .logo-img img {
+  max-width: 72px;
+  transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.footer__icons .social-logo-img:hover {
+  opacity: .5;
+  transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.footer__links {
+  margin-right: 111px;
+}
+
+.footer__icons, .footer__links, .footer__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__social-logos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__links nav ul {
+  list-style: none;
+}
+
+.footer__links nav ul li {
+  margin-bottom: 11px;
+}
+
+.footer__links nav ul li:last-child {
+  margin-bottom: 0;
+}
+
+.footer__links nav ul li a {
+  color: #F2F1EB;
+}
+
+.footer__links nav ul li:hover a {
+  text-decoration: underline;
+}
+
+.footer__contacts a {
+  display: block;
+  color: #F2F1EB;
+  text-decoration-line: underline;
+  margin-bottom: 16px;
+}
+
+.footer__contacts a:last-child {
+  margin-bottom: 0;
+}
+
+.footer__contacts a:nth-child(2) {
+  margin-bottom: 34px;
+}
+
+.footer__contacts span {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  line-height: 17px;
+}
+
+.footer__contacts span {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 1440px) {
-  .header__container {
+  .container {
     max-width: 1001px;
   }
   .header__logo {
@@ -620,13 +719,17 @@ a {
   .header__bot-row .online-evaluating {
     display: none;
   }
+
+  .footer__icons {
+    margin-right: 136px;
+  }
 }
 
 @media screen and (max-width: 1205px) {
   header {
     height: 46px;
   }
-  .header__container {
+  .container {
     max-width: 760px;
   }
   .header__top-row {
@@ -643,10 +746,22 @@ a {
   .header__bot-row {
     display: none;
   }
+
+  .footer__main {
+    padding: 72px 83px 82px;
+  }
+
+  .footer__icons {
+    margin-right: 66px;
+  }
+
+  .footer__links {
+    margin-right: 71px;
+  }
 }
 
 @media screen and (max-width: 998px) {
-  .header__container {
+  .container {
     max-width: 624px;
   }
   .header__top-row a, .link-classic {
@@ -712,14 +827,57 @@ a {
 }  
 
 @media screen and (max-width: 768px) {
-  .header__container {
+  .container {
     max-width: 480px;
+  }
+
+  .footer__main {
+    flex-direction: column;
+    padding: 16px 16px 32px 16px;
+  }
+
+  .footer__icons {
+    margin-right: 0;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .footer__icons .social-logo-img {
+    width: 40px;
+  }
+
+  .footer__icons .social-logo-img img{
+    width: 100%;
+  }
+
+  .footer__icons .social-logo-img:first-child {
+    margin-right: 16px;
+  }
+
+  .footer__links {
+    margin-right: 0;
+    margin-bottom: 24px;
   }
 }  
 
 @media screen and (max-width: 560px) {
-  .header__container {
+  .container {
     max-width: 350px;
+  }
+
+  footer {
+    padding-bottom: 0;
+    background: #05342F;
+  }
+
+  footer .container {
+    max-width: 100%;
+  }
+
+  .footer__main {
+    max-width: 350px;
+    margin: 0 auto;
   }
 }  
 
@@ -728,7 +886,7 @@ a {
     padding: 16px 0;
     height: 40px;
   }
-  .header__container {
+  .container, footer .container {
     max-width: calc(100% - 32px);
     padding: 0 16px
   }
@@ -760,5 +918,11 @@ a {
 
   .header-mobile__menu.submenu button {
     width: 228px;
+  }
+
+  .footer__main {
+    max-width: calc(100% - 32px);
+    margin: 0;
+    padding: 16px 0 32px 0;
   }
 }  
