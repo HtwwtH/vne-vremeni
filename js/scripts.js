@@ -35,6 +35,7 @@ $(document).ready(function () {
 
   // close menu if click outer
   $(document).mouseup(function (e) { // событие клика по веб-документу
+    console.log(e.target)
     var div = $("#mobile-submenu"); // тут указываем ID элемента
     if (div.css("display") == "block") {
       if (!div.is(e.target) // если клик был не по нашему блоку
@@ -53,6 +54,17 @@ $(document).ready(function () {
       }
     }
   });
+
+  // $("#overlay").click(function () {
+  //   if ($("#mobile-submenu").css("display") == "block") {
+  //     $("#overlay").fadeOut(300, "linear");
+  //     $("#mobile-submenu").animate({ width: 'toggle' }, 300);
+  //   }
+  //   if ($("#header-mobile__menu").css("display") == "block") {
+  //     $("#overlay").fadeOut(300, "linear");
+  //     $("#header-mobile__menu").animate({ width: 'toggle' }, 300);
+  //   }
+  // });
 
   // Swipe events of mobile menu
   $("#header-mobile__menu").swipe({
@@ -77,6 +89,15 @@ $(document).ready(function () {
           $("#header-mobile__menu").animate({ width: 'toggle' }, 300);
         }
       }
+    },
+    click: function (event, target) {
+      if ($("#mobile-submenu").css("display") == "block") {
+        $("#mobile-submenu").animate({ width: 'toggle' }, 300);
+      }
+      if ($("#header-mobile__menu").css("display") == "block") {
+        $("#overlay").fadeOut(300, "linear");
+        $("#header-mobile__menu").animate({ width: 'toggle' }, 300);
+      }
     }
   });
   $("#mobile-submenu").swipe({
@@ -91,6 +112,7 @@ $(document).ready(function () {
   });
   $("#header-mobile__menu").swipe({ allowPageScroll: "vertical" });
   $("#mobile-submenu").swipe({ allowPageScroll: "vertical" });
+  $("#overlay").swipe({ allowPageScroll: "vertical" });
 
 
 });
