@@ -33,39 +33,6 @@ $(document).ready(function () {
     $("#mobile-submenu").animate({ width: 'toggle' }, 300);
   });
 
-  // close menu if click outer
-  $(document).mouseup(function (e) { // событие клика по веб-документу
-    console.log(e.target)
-    var div = $("#mobile-submenu"); // тут указываем ID элемента
-    if (div.css("display") == "block") {
-      if (!div.is(e.target) // если клик был не по нашему блоку
-        && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        $("#overlay").fadeOut(300, "linear");
-        div.animate({ width: 'toggle' }, 300); // скрываем его
-      }
-    }
-
-    var div = $("#header-mobile__menu"); // тут указываем ID элемента
-    if (div.css("display") == "block") {
-      if (!div.is(e.target) // если клик был не по нашему блоку
-        && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        $("#overlay").fadeOut(300, "linear");
-        div.animate({ width: 'toggle' }, 300); // скрываем его
-      }
-    }
-  });
-
-  // $("#overlay").click(function () {
-  //   if ($("#mobile-submenu").css("display") == "block") {
-  //     $("#overlay").fadeOut(300, "linear");
-  //     $("#mobile-submenu").animate({ width: 'toggle' }, 300);
-  //   }
-  //   if ($("#header-mobile__menu").css("display") == "block") {
-  //     $("#overlay").fadeOut(300, "linear");
-  //     $("#header-mobile__menu").animate({ width: 'toggle' }, 300);
-  //   }
-  // });
-
   // Swipe events of mobile menu
   $("#header-mobile__menu").swipe({
     swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
