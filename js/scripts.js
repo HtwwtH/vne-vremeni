@@ -1,17 +1,96 @@
 $(document).ready(function () {
+  // show hidden submenu in PC version
   $submenu = $(".header__submenu-block");
   $("#showSubmenu").mouseenter(function () {
     $submenu.slideDown(300);
   });
   $submenu.mouseleave(function (e) {
-    console.log(e.relatedTarget.id);
-    if (e.relatedTarget.id == "showSubmenu")
-      {}
+    if (e.relatedTarget.id) {
+      if (e.relatedTarget.id == "showSubmenu") { }
+    }
     else
       $submenu.slideUp(300);
   });
-  $("#showSubmenu").mouseleave(function () {
-    $submenu.slideUp(300);
+  $("#showSubmenu").mouseleave(function (e) {
+    if ((e.relatedTarget).outerHTML.indexOf("header__submenu") == -1)
+      $submenu.slideUp(300);
+    else { }
   });
+
+  // show Mobile Menu
+  $("#showMobileMenu").click(function () {
+    $("#overlay").fadeIn(300, "linear");
+    $("#header-mobile__menu").animate({ width: 'toggle' }, 300);
+  });
+
+  // show Mobile Menu
+  $("#returnMobileMenu").click(function () {
+    $("#mobile-submenu").animate({ width: 'toggle' }, 300);
+  });
+
+  // show Mobile Submenu
+  $("#showMobileSubmenu").click(function () {
+    $("#mobile-submenu").animate({ width: 'toggle' }, 300);
+  });
+
+  // close menu if click outer
+  $(document).mouseup(function (e) { // событие клика по веб-документу
+    var div = $("#mobile-submenu"); // тут указываем ID элемента
+    if (div.css("display") == "block") {
+      if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        $("#overlay").fadeOut(300, "linear");
+        div.animate({ width: 'toggle' }, 300); // скрываем его
+      }
+    }
+
+    var div = $("#header-mobile__menu"); // тут указываем ID элемента
+    if (div.css("display") == "block") {
+      if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        $("#overlay").fadeOut(300, "linear");
+        div.animate({ width: 'toggle' }, 300); // скрываем его
+      }
+    }
+  });
+
+  // Swipe events of mobile menu
+  $("#header-mobile__menu").swipe({
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      if (direction == "left") {
+        $("#overlay").fadeOut(300, "linear");
+        $("#header-mobile__menu").animate({ width: 'toggle' }, 300);
+      }
+    }
+  });
+  $("#overlay").swipe({
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      if (direction == "left") {
+        if ($("#mobile-submenu").css("display") == "block") {
+          $("#mobile-submenu").animate({ width: 'toggle' }, 300);
+          event.preventDefault();
+          event.stopPropagation();
+          swiping = true;
+        }
+        else if ($("#header-mobile__menu").css("display") == "block") {
+          $("#overlay").fadeOut(300, "linear");
+          $("#header-mobile__menu").animate({ width: 'toggle' }, 300);
+        }
+      }
+    }
+  });
+  $("#mobile-submenu").swipe({
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+      if (direction == "left") {
+        $("#mobile-submenu").animate({ width: 'toggle' }, 300);
+        event.preventDefault();
+        event.stopPropagation();
+        swiping = true;
+      }
+    }
+  });
+  $("#header-mobile__menu").swipe({ allowPageScroll: "vertical" });
+  $("#mobile-submenu").swipe({ allowPageScroll: "vertical" });
+
 
 });

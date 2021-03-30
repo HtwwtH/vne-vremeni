@@ -11,6 +11,12 @@ ul {
     padding-inline-start: 0;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
 *:focus {
   outline: 1px solid rgba(5, 52, 47, 0.5);
 }
@@ -71,6 +77,68 @@ ul {
   .btn-green:active {
     border: 1px solid #286460;
     background: #286460;
+    color: #F2F1EB;
+    transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+  }
+  .btn-green-gold {
+    border: 1px solid #BCA36E;
+    color: #BCA36E;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    background: #05342F;
+    transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+  }
+  .btn-green-gold:hover {
+    cursor: pointer;
+    border: 1px solid #05342F;
+    color: #05342F;
+    background: #BCA36E;
+    transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+  }
+  .btn-green-gold:active {
+    border: 1px solid #BCA36E;
+    background: #05342F;
+    color: #BCA36E;
+    transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+  }
+  .btn-green-beige {
+    border: 1px solid #F2F1EB;
+    color: #F2F1EB;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    background: #05342F;
+    transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+  }
+  .btn-green-beige:hover {
+    cursor: pointer;
+    border: 1px solid #F2F1EB;
+    color: #05342F;
+    background: #F2F1EB;
+    transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+  }
+  .btn-green-beige:active {
+    border: 1px solid #F2F1EB;
+    background: #05342F;
     color: #F2F1EB;
     transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
@@ -313,9 +381,7 @@ a {
   background: #F2F1EB;
   display: none;
 }
-/* .header__submenu-block.hidden {
-  display: none;
-} */
+
 .header__submenu {
   position: relative;
   top: 0;
@@ -339,6 +405,194 @@ a {
   font-size: 14px;
 }
 
+/* Mobile menu */
+.header-mobile__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 32px);
+  width: 100%;
+  max-width: 354px;
+  background: #05342F;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  display: none;
+  z-index: 15;
+}
+
+.header-mobile__search {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.header-mobile__search button {
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+
+.header-mobile__search input {
+  padding: 12px;
+  padding-left: 38px;
+  width: 270px;
+  height: 16px;
+  border: 1px solid #F2F1EB;
+  color: #F2F1EB;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  background: #05342F;
+}
+
+.header-mobile__search input::placeholder {
+  color: #F2F1EB;
+  opacity: 0.5;
+}
+
+.header-mobile__search input:hover, .header-mobile__search input:focus {
+  outline: none;
+}
+
+.header-mobile__navigation {
+  display: flex;
+  flex-direction: column;
+  background: #05342F;
+  border: 1px solid #F2F1EB;
+}
+
+.header-mobile__navigation ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-mobile__navigation ul li {
+  padding: 17px 15px 17px 14px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.header-mobile__navigation ul li a {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F2F1EB;
+  height: 17px;
+  overflow: hidden;
+}
+
+.header-mobile__navigation ul li.link-gold a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #BCA36E;
+}
+
+.header-mobile__navigation ul li:hover a, .header-mobile__navigation ul li:active a {
+  text-decoration-line: underline;
+}
+
+.header-mobile__navigation ul li:after{
+  content: "";
+  border: none; 
+  background-color: #F2F1EB; 
+  color: #F2F1EB; 
+  height: 1px; 
+  width: 290px;
+  display: block;
+  position: absolute;
+  top: 50px;
+}
+
+.header-mobile__navigation ul li:last-child:after{
+  display: none;
+}
+
+.header-mobile__navigation ul li:first-child {
+  padding: 16px 15px 17px 14px;
+}
+.header-mobile__navigation ul li:first-child a:after{
+  content: url("/vne-vremeni/images/icons/arrow-right-white.svg");
+  margin-left: 12px;
+  position: absolute;
+}
+.header-mobile__navigation ul li:last-child {
+  padding: 17px 15px 16px 14px;
+}
+
+.mobile-container {
+  position: relative;
+  height: 100%;
+  width: calc(100% - 32px);
+}
+
+.header-mobile__online-evaluating {
+  position: absolute;
+  bottom: 0;
+  width: 320px;
+  height: 48px;
+}
+
+/* Mobile menu Submenu */
+.header-mobile__menu.submenu {
+  display: none;
+  height: unset;
+  z-index: 20;
+}
+
+.header-mobile__menu.submenu button {
+  position: relative;
+  width: 322px;
+  height: 41px;
+  margin-bottom: 24px;
+}
+.header-mobile__menu.submenu button span {
+  position: absolute;
+  left: 40px;
+  top: 13px;
+}
+
+.header-mobile__menu.submenu button svg{
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  fill: #F2F1EB;
+}
+.header-mobile__menu.submenu button:hover svg{
+  fill: #05342F;
+}
+.header-mobile__menu.submenu button:active svg{
+  fill: #F2F1EB;
+}
+.header-mobile__menu.submenu .header-mobile__navigation ul li:first-child a:after {
+    content: none;
+}
+.header-mobile__navigation ul li a.link-gold {
+  font-size: 14px;
+  font-weight: 500;
+  color: #BCA36E;
+}
+.header-mobile__navigation ul li a.link-red {
+  font-size: 14px;
+  font-weight: 500;
+  color: #C03333;
+}
+
+.overlay {
+  position: fixed;
+  min-height: 100%;
+  background: #05342F;
+  opacity: .5;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
 
 @media screen and (max-width: 1440px) {
   .header__container {
@@ -486,5 +740,25 @@ a {
   }
   .header__phone {
     margin-right: 8px;
+  }
+
+  .header-mobile__menu {
+    max-width: 260px;
+  }
+
+  .header-mobile__search input {
+    width: 176px;
+  }
+
+  .header-mobile__navigation ul li:after {
+    width: 196px;
+  }
+
+  .header-mobile__online-evaluating {
+    width: 226px;
+  }
+
+  .header-mobile__menu.submenu button {
+    width: 228px;
   }
 }  
