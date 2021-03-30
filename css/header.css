@@ -879,6 +879,10 @@ footer {
     max-width: 350px;
     margin: 0 auto;
   }
+
+  .footer__icons .logo-img img {
+    width: 57px;
+  }
 }  
 
 @media screen and (max-width: 380px) {
