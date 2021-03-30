@@ -6,5 +6,8 @@ $(document).ready(function () {
   $submenu.mouseleave(function () {
     $submenu.slideUp(300);
   });
+  $("#showSubmenu").mouseleave(function () {
+    $submenu.slideUp(300);
+  });
 
 });
