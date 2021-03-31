@@ -196,7 +196,18 @@ button {
     color: #C03333;
   }
 
-  .span-description {
+  .span-subtitle {
+    display: block;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 43px;
+    color: #05342F;
+    margin-bottom: 24px;
+  }
+
+  .span-description, .a-description {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -205,12 +216,6 @@ button {
     color: #0A1F1E;
   }
   .a-description {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #0A1F1E;
     cursor: pointer;
     text-decoration-line: none;
   }
@@ -221,6 +226,24 @@ button {
   .a-description:active {
     color: #0A1F1E;
     text-decoration-line: underline;
+  }
+
+  p.s-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #05342F;
+  }
+
+  p.m-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #05342F;
   }
 
   p.mini-text, a.mini-text {
@@ -403,9 +426,18 @@ section {
 .icon-heart {
   display: none;
 }
+.icon-heart svg{
+  width: 16px;
+  height: 16px;
+}
 
 .icon-basket {
   display: none;
+}
+
+.icon-basket {
+  width: 17px;
+  height: 16px;
 }
 
 /* Bottom header block */
@@ -887,6 +919,9 @@ footer {
 }
 
 @media screen and (max-width: 998px) {
+  section {
+    margin-bottom: 92px;
+  }
   .container {
     max-width: 624px;
   }
@@ -953,6 +988,21 @@ footer {
 }  
 
 @media screen and (max-width: 768px) {
+  section {
+    margin-bottom: 72px;
+  }
+  h1 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  h1 span {
+    font-size: 40px;
+    line-height: 53px;
+  }
+  h2 {
+    font-size: 38px;
+    line-height: 42px;
+  }
   h2.mrb-m{
     margin-bottom: 30px;
   }
@@ -963,6 +1013,10 @@ footer {
 
   .container {
     max-width: 480px;
+  }
+  
+  .offer__block:last-child {
+    margin-bottom: 0;
   }
 
   .footer__main {
@@ -1011,8 +1065,29 @@ footer {
 }  
 
 @media screen and (max-width: 560px) {
+  p.s-text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  p.m-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .span-subtitle {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 13px;
+  }
+  .span-description {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
   h2.mrb-m{
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 
   h2.mrb-s{
@@ -1020,6 +1095,16 @@ footer {
   }
   .container {
     max-width: 350px;
+  }
+
+  .icon-heart svg{
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon-basket {
+    width: 21px;
+    height: 20px;
   }
 
   footer {
