@@ -465,6 +465,9 @@
     top: 20px;
     left: 29px
   }
+  .valuation__button, .expertise__button {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 380px) {
