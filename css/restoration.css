@@ -88,3 +88,9 @@
 .services__image img {
   width: 100%;
 }
+
+/* Works section */
+
+.works__block {
+  height: 636px;
+}

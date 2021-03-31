@@ -4,7 +4,7 @@ body {
   background: #F2F1EB;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
@@ -221,6 +221,30 @@ button {
   .a-description:active {
     color: #0A1F1E;
     text-decoration-line: underline;
+  }
+
+  p.mini-text, a.mini-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    color: #05342F;
+  }
+  a.mini-text {
+    color: #05342F;
+    text-decoration-line: underline;
+    margin-bottom: 16px;
+  }
+  a.mini-text:hover {
+    color: #BCA36E;
+  }
+  a.mini-text:active {
+    color: inherit;
+  }
+
+  .footer__under-mobile p.mini-text, .footer__under-mobile a.mini-text {
+    color: #F2F1EB;
   }
 /* self-defined universal styles */
 
@@ -453,6 +477,8 @@ section {
 .header__submenu-block {
   background: #F2F1EB;
   display: none;
+  position: relative;
+  z-index: 90;
 }
 
 .header__submenu {
@@ -463,6 +489,7 @@ section {
   justify-content: flex-start;
   flex-direction: row;
   background: #F2F1EB;
+  z-index: 100;
 }
 
 .header__submenu .submenu__column {
@@ -752,7 +779,7 @@ footer {
 }
 
 .footer__contacts a:nth-child(2) {
-  margin-bottom: 34px;
+  margin-bottom: 24px;
 }
 
 .footer__contacts span {
@@ -764,6 +791,32 @@ footer {
 
 .footer__contacts span {
   margin-bottom: 0;
+}
+
+.footer__under {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__under p.mini-text {
+  margin-right: 2px;
+}
+
+.footer-under__links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-under__links a {
+  margin-right: 16px;
+}
+.footer-under__links a:last-child {
+  margin-right: 0;
+}
+
+.footer__under-mobile {
+  display: none;
 }
 
 @media screen and (max-width: 1440px) {
@@ -932,13 +985,28 @@ footer {
     width: 100%;
   }
 
+  .footer__under {
+    display: none;
+  }
+  .footer__under-mobile {
+    display: block;
+  }
+
   .footer__icons .social-logo-img:first-child {
     margin-right: 16px;
   }
 
   .footer__links {
     margin-right: 0;
-    margin-bottom: 24px;
+    margin-bottom: 34px;
+  }
+
+  .footer__links nav ul li {
+    margin-bottom: 16px;
+  }
+
+  .footer__contacts {
+    margin-bottom: 32px;
   }
 }  
 
