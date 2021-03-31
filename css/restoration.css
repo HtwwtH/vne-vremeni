@@ -434,7 +434,7 @@
 
 @media screen and (max-width: 560px) {
   .services__card {
-    width: 136px;
+    width: 160px;
     margin-right: 16px;
   }
   .work__description {
@@ -487,7 +487,10 @@
 }
 
 @media screen and (max-width: 350px) {
-    .works__block {
+  .services__card {
+    width: 136px;
+  }
+  .works__block {
     align-items: flex-start;
   }
 }
