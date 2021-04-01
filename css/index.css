@@ -171,10 +171,6 @@
 }
 
 @media screen and (max-width: 998px) {
-  .work__photo {
-    width: 300px;
-  }
-
   .index__description .description__block {
     flex-direction: column;
   }
@@ -192,12 +188,15 @@
     top: -35px;
     left: 38px;
   }
-
+  .index__auctions h2, .index__exhibits h2 {
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .mini-card {
     width: 343px;
+    margin-right: 0;
   }
   .description__block .description__h1 {
     font-size: 38px;

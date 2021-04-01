@@ -2,6 +2,8 @@
 body {
   margin: 0;
   background: #F2F1EB;
+  font-family: Montserrat;
+  font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -22,14 +24,16 @@ button {
   padding: 0;
 }
 
-*:focus {
-  outline: 1px solid rgba(5, 52, 47, 0.5);
+button {
+    outline: none; 
 }
 
 /* self-defined universal styles */
   .btn-beige {
     border: 1px solid #05342F;
     color: #05342F;
+    font-family: Montserrat;
+    font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
@@ -60,6 +64,8 @@ button {
   .btn-green {
     border: 1px solid #05342F;
     color: #F2F1EB;
+    font-family: Montserrat;
+    font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
@@ -91,6 +97,8 @@ button {
   .btn-green-gold {
     border: 1px solid #BCA36E;
     color: #BCA36E;
+    font-family: Montserrat;
+    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -122,6 +130,8 @@ button {
   .btn-green-beige {
     border: 1px solid #F2F1EB;
     color: #F2F1EB;
+    font-family: Montserrat;
+    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
@@ -275,6 +285,7 @@ button {
   .banner {
     position: relative;
     height: 558px;
+    margin-top: 175px;
   }
   .banner .banner__overlay {
     position: absolute;
@@ -288,6 +299,13 @@ button {
     position: relative;
     top: -291px;
     z-index: 2;
+  }
+  @media screen and (max-width: 1205px) {
+    .banner {
+      position: relative;
+      height: 558px;
+      margin-top: 91px;
+    }
   }
   @media screen and (max-width: 768px) {
     .banner .container {
@@ -485,6 +503,10 @@ header {
   color: #05342F;
   background: #F2F1EB;
   height: 130px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
 }
 
 h1 span, .fake-h1 span {
@@ -603,8 +625,8 @@ section {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 281px;
-  margin-right: 101px;
+  width: 381px;
+  margin-right: 0;
 }
 
 .header__top-row a {
@@ -615,7 +637,7 @@ section {
 }
 
 .cart__block {
-  width: 73px;
+  width: 173px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -628,7 +650,9 @@ section {
   line-height: 15px;
   text-decoration-line: underline;
 }
-
+.header__mobile-icons {
+  display: flex;
+}
 .icon-heart {
   display: none;
   cursor: pointer;
@@ -639,18 +663,18 @@ section {
   fill: none;
 }
 
-  .icon-heart path, .icon-basket circle {
-    stroke: #05342F;
-  }
-  .icon-heart:hover path {
-    stroke: #BCA36E;
-  }
-  .icon-heart:active svg {
-    fill: #05342F;
-  }
-  .icon-heart:active path {
-    stroke: #05342F;
-  }
+.icon-heart path, .icon-basket circle {
+  stroke: #05342F;
+}
+.icon-heart:hover path {
+  stroke: #BCA36E;
+}
+.icon-heart:active svg {
+  fill: #05342F;
+}
+.icon-heart:active path {
+  stroke: #05342F;
+}
 
 .icon-basket {
   display: none;
@@ -760,7 +784,7 @@ section {
 
 /* Mobile menu */
 .header-mobile__menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: calc(100% - 32px);
@@ -1087,9 +1111,14 @@ footer {
   .header__search {
     margin-right: 30px;
   }
+
+  .cart__block {
+    width: 73px;
+  }
   
   .top-row__navigation {
     margin-right: 0;
+    width: 281px;
   }
   .bot-row__navigation {
     width: 100%;
@@ -1107,6 +1136,25 @@ footer {
 @media screen and (max-width: 1205px) {
   header {
     height: 46px;
+  }
+  .header__logo {
+    margin-right: 18px;
+  }
+  .header__phone {
+      margin-right: 8px;
+  }
+  .top-row__navigation {
+    margin-right: 0;
+    width: 381px;
+  }
+  .top-row__navigation a {
+    margin-right: 12px;
+  }
+  .top-row__navigation a:last-child {
+    margin-right: 0;
+  }
+  .cart__block {
+    width: 173px;
   }
   .container {
     max-width: 760px;
@@ -1165,32 +1213,20 @@ footer {
     font-size: 14px;
     margin-right: 24px;
   }
+
   .top-row__navigation {
+    justify-content: flex-start;
+    width: 281px;
+  }
+
+  .top-row__navigation a {
+    margin-right: 54px;
+  }
+
+  .top-row__navigation a:first-child {
     display: none;
   }
-  
-  .icon-heart {
-    cursor: pointer;
-    display: block;
-    margin-right: 8px;
-  }
-  
-  .icon-basket {
-    cursor: pointer;
-    display: block;
-  }
-  .icon-basket svg {
-    fill: none;
-  }
-  .icon-basket path {
-    stroke: #05342F;
-  }
-  .icon-basket:hover path, .icon-basket:hover circle {
-    stroke: #BCA36E;
-  }
-  .icon-basket:active path, .icon-basket:active circle {
-    stroke: #05342F;
-  }
+
 }  
 
 @media screen and (max-width: 768px) {
@@ -1215,6 +1251,33 @@ footer {
 
   h2.mrb-s{
     margin-bottom: 24px;
+  }
+
+  .top-row__navigation {
+    display: none;
+  }
+
+  .icon-heart {
+    cursor: pointer;
+    display: block;
+    margin-right: 28px;
+  }
+  
+  .icon-basket {
+    cursor: pointer;
+    display: block;
+  }
+  .icon-basket svg {
+    fill: none;
+  }
+  .icon-basket path {
+    stroke: #05342F;
+  }
+  .icon-basket:hover path, .icon-basket:hover circle {
+    stroke: #BCA36E;
+  }
+  .icon-basket:active path, .icon-basket:active circle {
+    stroke: #05342F;
   }
 
   .container {
@@ -1313,6 +1376,10 @@ footer {
     max-width: 350px;
   }
 
+  .icon-heart {
+    margin-right: 18px;
+  }
+
   .icon-heart svg{
     width: 20px;
     height: 20px;
@@ -1348,6 +1415,9 @@ footer {
     padding: 16px 0;
     height: 40px;
   }
+  .icon-heart {
+    margin-right: 8px;
+  }
   .container, footer .container {
     max-width: calc(100% - 32px);
     padding: 0 16px
@@ -1380,6 +1450,10 @@ footer {
 
   .header-mobile__menu.submenu button {
     width: 228px;
+  }
+
+  .banner {
+    margin-top: 72px;
   }
 
   .footer__main {
