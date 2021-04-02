@@ -753,7 +753,7 @@ section {
   padding: 15px 34px 15px 16px;
 }
 .bot-row__navigation ul li:first-child a:after{
-  content: url("/images/icons/arrow.svg");
+  content: url("/vne-vremeni/images/icons/arrow.svg");
   margin-left: 12px;
   position: absolute;
 }
@@ -910,7 +910,7 @@ section {
   padding: 16px 15px 17px 14px;
 }
 .header-mobile__navigation ul li:first-child a:after{
-  content: url("/images/icons/arrow-right-white.svg");
+  content: url("/vne-vremeni/images/icons/arrow-right-white.svg");
   margin-left: 12px;
   position: absolute;
 }
