@@ -5,9 +5,15 @@
   margin-right: 30px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .mini-card:last-child {
   margin-right: 0;
+}
+.mini-card .new {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* Banner section */

@@ -239,6 +239,17 @@ button {
     text-decoration-line: underline;
   }
 
+  .span-micro {
+    text-align: center;
+    display: block;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 10px;
+    color: #F2F1EB;
+  }
+
   p.s-text {
     font-family: Montserrat;
     font-style: normal;
@@ -677,12 +688,19 @@ section {
 }
 
 .icon-basket {
+  position: relative;
   display: none;
-}
-
-.icon-basket {
   width: 17px;
   height: 16px;
+}
+.icon-basket .count-circle {
+  position: absolute;
+  top: 0;
+  right: -3px;
+  border-radius: 100%;
+  width: 50%;
+  height: 50%;
+  background: #BCA36E;
 }
 
 /* Bottom header block */
