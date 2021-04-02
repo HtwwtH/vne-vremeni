@@ -292,6 +292,30 @@ button {
     color: #F2F1EB;
   }
 
+  .thank {
+    margin-top: 247px;
+    margin-bottom: 72px;
+  }
+  .thank h2 {
+    max-width: 360px;
+  }
+  .thank__photo {
+    width: 483px;
+    height: 386px;
+  }
+  .thank-block__description {
+    margin-top: 31px;
+    margin-bottom: 48px;
+    width: 57%;
+  }
+  .thank-block__description p {
+    margin-bottom: 48px;
+  }
+  .thank__button button {
+    width: 246.43px;
+    height: 55px;
+  }
+
   /* Banner style */
   .banner {
     position: relative;
@@ -311,11 +335,23 @@ button {
     top: -291px;
     z-index: 2;
   }
+  @media screen and (max-width: 1440px) {
+    .thank__photo {
+      width: 363px;
+      height: 280px;
+    }
+  }
   @media screen and (max-width: 1205px) {
     .banner {
       position: relative;
       height: 558px;
       margin-top: 91px;
+    }
+    .thank {
+      margin-top: 107px;
+    }
+    .thank-block__description p {
+      margin-bottom: 32px;
     }
   }
   @media screen and (max-width: 768px) {
@@ -1245,6 +1281,18 @@ footer {
     display: none;
   }
 
+  .thank__photo .main-img {
+    left: 0;
+    top: 24px;
+    position: relative;
+  }
+
+  .thank__photo .bg-img {
+    left: 24px;
+    top: 0;
+    position: absolute;
+  }
+
 }  
 
 @media screen and (max-width: 768px) {
@@ -1426,6 +1474,14 @@ footer {
   .footer__icons .logo-img img {
     width: 57px;
   }
+
+  .thank__photo {
+    width: 263px;
+    height: 180.88px;
+  }
+  .thank-block__description {
+    margin-top: 44px;
+  }
 }  
 
 @media screen and (max-width: 380px) {
@@ -1468,6 +1524,14 @@ footer {
 
   .header-mobile__menu.submenu button {
     width: 228px;
+  }
+
+  .thank {
+    margin-top: 88px;
+  }
+  .thank__photo {
+    width: 263px;
+    height: 180.88px;
   }
 
   .banner {
