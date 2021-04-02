@@ -5,6 +5,9 @@
   height: 559px;
   object-fit: cover;
 }
+.restoration__banner img {
+  display: none;
+}
 
 /* Offers section */
 
@@ -87,7 +90,7 @@
 .work__description {
   margin-left: 100px;
   margin-right: 24px;
-  margin-top: 64px;
+  margin-top: 0;
   width: 40%;
   max-width: 481px;
 }
@@ -259,6 +262,18 @@
 }
 
 @media screen and (max-width: 560px) {
+  .restoration__banner video {
+    display: none;
+    width: 100%;
+    height: 559px;
+    object-fit: cover;
+  }
+  .restoration__banner img {
+    display: block;
+    width: 100%;
+    height: 447px;
+    object-fit: cover;
+  }
   .services__card {
     width: 154px;
     margin-right: 16px;
