@@ -1538,7 +1538,6 @@ footer {
   }
 
   .footer__main {
-    max-width: calc(100% - 32px);
     margin: 0;
     padding: 16px 0 32px 0;
   }
