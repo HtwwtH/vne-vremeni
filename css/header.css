@@ -61,6 +61,38 @@ button {
     -moz-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
   }
+  .btn-transparent {
+    border: 1px solid #F2F1EB;
+    color: #F2F1EB;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    background: transparent;
+    transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+  }
+  .btn-transparent:hover {
+    cursor: pointer;
+    border: 1px solid #F2F1EB;
+    color: #05342F;
+    background: #F2F1EB;
+    transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+  }
+  .btn-transparent:active {
+    border: 1px solid #F2F1EB;
+    background: transparent;
+    transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+  }
   .btn-green {
     border: 1px solid #05342F;
     color: #F2F1EB;
